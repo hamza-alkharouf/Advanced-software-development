@@ -13,7 +13,7 @@ class Connection(object):
     SCP   = ['SCP', False]
     FTP   = ['FTP', False]
 
-    #Protocol we have 
+    # Protocol we have 
     checkIsProtocol = [SSH, TENET ,HTTP ,SCP ,FTP]
 
     # define the classmethod
