@@ -211,6 +211,24 @@ def main():
 ```
 
 
-## class diagram of Singleton design pattern
+## Class Diagram of Singleton design pattern
+- Name of Class Diagram is Connection,
+- We have 8 Attributes
+  1. instance 
+  2. protocoles 
+  3. SSH   
+  4. TENET 
+  5. HTTP  
+  6. SCP   
+  7. FTP   
+  8. checkIsProtocol
+- We have 6 Operations
+  1. Instance
+  2. getInstance
+  3. getCurrentConnections
+  4. getData
+  5. send
+  6. release
+  
 
 ![Singleton design pattern](https://github.com/hamza-alkharouf/Advanced-software-development/blob/main/Singleton%20design%20pattern/images/Singleton%20design%20pattern.png)
