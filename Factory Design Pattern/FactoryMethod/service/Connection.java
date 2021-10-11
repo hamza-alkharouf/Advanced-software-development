@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import com.FactoryMethod.Factory.ProtocolFactory;
 import com.FactoryMethod.constants.ConnectionType;
 import com.FactoryMethod.impl.Ftp;
 import com.FactoryMethod.impl.Scp;
@@ -28,6 +29,7 @@ public class Connection {
 				System.out.println("Can't create more than 3 connection!!");
 				return null;
 			}
+			ProtocolFactory protocolfactory = new ProtocolFactory();
 			if(connectionType.equals(ConnectionType.FTP)) {
 				Protocol ftp = new Ftp();
 				connections.put(connectionType, ftp);
@@ -35,15 +37,15 @@ public class Connection {
 			}
 			if(connectionType.equals(ConnectionType.SSH)) {
 				connections.put(connectionType, Ssh.getInsatnce());
-				return Ssh.getInsatnce();
+				return protocolfactory.getInstance("SSH");
 			}
 			if(connectionType.equals(ConnectionType.TELNET)) {
 				connections.put(connectionType, Telnet.getInsatnce());
-				return Telnet.getInsatnce();
+				return protocolfactory.getInstance("SSH");
 			}
 			if(connectionType.equals(ConnectionType.SCP)) {
 				connections.put(connectionType, Scp.getInsatnce());
-				return Scp.getInsatnce();
+				return protocolfactory.getInstance("SSH");
 			}
 		}
 		return null;
@@ -53,18 +55,20 @@ public class Connection {
 	public static boolean release(String connectionType) {
 		if(connections.containsKey(connectionType)) {
 			connections.remove(connectionType);
+			ProtocolFactory protocolfactory = new ProtocolFactory();
+
 			if(connectionType.equals(ConnectionType.FTP)) {
-				Ftp.getInsatnce().release();
+				protocolfactory.release("FTP");
 				
 			} else if(connectionType.equals(ConnectionType.SSH)) {
-				Ssh.getInsatnce().release();
-				
+				protocolfactory.release("SSH");
+
 			} else if(connectionType.equals(ConnectionType.TELNET)) {
-				Telnet.getInsatnce().release();
-				 
+				protocolfactory.release("TELNET");
+
 			} else if(connectionType.equals(ConnectionType.SCP) ) {
-				Scp.getInsatnce().release();
-				 
+				protocolfactory.release("SCP");
+
 			}
 			return true;
 		}
