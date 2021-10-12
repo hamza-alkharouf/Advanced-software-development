@@ -40,9 +40,10 @@ The things you need before installing the software.
     ![Design Pattern - Factory Pattern](https://github.com/hamza-alkharouf/Advanced-software-development/blob/main/Factory%20Design%20Pattern/image/factory_pattern.png)
     
     
-   2. SOLID principles are a set of general guidelines that are widely applicable to consider as you go throughout the process of designing your code structure.
+   2. 
+   * SOLID principles are a set of general guidelines that are widely applicable to consider as you       go throughout the process of designing your code structure.
    
-   The factory method doesn't follow any principle but it is meant to separate the responsibility of object creation to a different class to deal with the problem of creating objects without having to specify the exact class of the object that will be created.
+   * The factory method doesn't follow any principle but it is meant to separate the responsibility of object creation to a different class to deal with the problem of creating objects without having to specify the exact class of the object that will be created.
    
    
    ##
