@@ -1,4 +1,4 @@
-package com.FactoryMethod.intf;
+package com.Factory_Design_Pattern.FactoryMethod.intf;
 
 public interface Protocol {
 	

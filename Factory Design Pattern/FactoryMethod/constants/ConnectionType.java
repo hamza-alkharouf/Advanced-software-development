@@ -1,4 +1,4 @@
-package com.FactoryMethod.constants;
+package com.Factory_Design_Pattern.FactoryMethod.constants;
 
 public class ConnectionType {
 	

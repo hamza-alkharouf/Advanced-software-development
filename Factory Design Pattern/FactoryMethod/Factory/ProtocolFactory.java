@@ -1,4 +1,4 @@
-package com.FactoryMethod.Factory;
+package com.Factory_Design_Pattern.FactoryMethod.Factory;
 
 import com.FactoryMethod.constants.ConnectionType;
 import com.FactoryMethod.impl.Ftp;

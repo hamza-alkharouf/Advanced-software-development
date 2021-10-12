@@ -1,4 +1,4 @@
-package com.FactoryMethod;
+package com.Factory_Design_Pattern.FactoryMethod;
 
 import com.FactoryMethod.constants.ConnectionType;
 import com.FactoryMethod.intf.Protocol;

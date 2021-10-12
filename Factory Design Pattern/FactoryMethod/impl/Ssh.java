@@ -1,4 +1,4 @@
-package com.FactoryMethod.impl;
+package com.Factory_Design_Pattern.FactoryMethod.impl;
 
 import com.FactoryMethod.intf.Protocol;
 

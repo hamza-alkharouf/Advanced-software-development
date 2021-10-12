@@ -1,4 +1,4 @@
-package com.FactoryMethod.service;
+package com.Factory_Design_Pattern.FactoryMethod.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,15 +37,15 @@ public class Connection {
 			}
 			if(connectionType.equals(ConnectionType.SSH)) {
 				connections.put(connectionType, Ssh.getInsatnce());
-				return protocolfactory.getInstance("SSH");
+				return protocolfactory.getInstance(ConnectionType.SSH);
 			}
 			if(connectionType.equals(ConnectionType.TELNET)) {
 				connections.put(connectionType, Telnet.getInsatnce());
-				return protocolfactory.getInstance("SSH");
+				return protocolfactory.getInstance(ConnectionType.TELNET);
 			}
 			if(connectionType.equals(ConnectionType.SCP)) {
 				connections.put(connectionType, Scp.getInsatnce());
-				return protocolfactory.getInstance("SSH");
+				return protocolfactory.getInstance(ConnectionType.SCP);
 			}
 		}
 		return null;
@@ -58,16 +58,16 @@ public class Connection {
 			ProtocolFactory protocolfactory = new ProtocolFactory();
 
 			if(connectionType.equals(ConnectionType.FTP)) {
-				protocolfactory.release("FTP");
+				protocolfactory.release(ConnectionType.FTP);
 				
 			} else if(connectionType.equals(ConnectionType.SSH)) {
-				protocolfactory.release("SSH");
+				protocolfactory.release(ConnectionType.SSH);
 
 			} else if(connectionType.equals(ConnectionType.TELNET)) {
-				protocolfactory.release("TELNET");
+				protocolfactory.release(ConnectionType.TELNET);
 
 			} else if(connectionType.equals(ConnectionType.SCP) ) {
-				protocolfactory.release("SCP");
+				protocolfactory.release(ConnectionType.SCP);
 
 			}
 			return true;
