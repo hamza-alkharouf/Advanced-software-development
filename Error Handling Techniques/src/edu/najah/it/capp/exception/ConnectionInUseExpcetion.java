@@ -8,6 +8,6 @@ public class ConnectionInUseExpcetion extends ProtocolException{
     @Override
     public String getMessage() {
         String message = super.getMessage();
-        return "Connection is inuse, you can’t release now" +message;
+        return  "Unexpcted error in protcol: " +message;
     }
 }

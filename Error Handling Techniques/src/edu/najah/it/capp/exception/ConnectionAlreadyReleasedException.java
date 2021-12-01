@@ -8,7 +8,7 @@ public class ConnectionAlreadyReleasedException extends  ProtocolException{
     @Override
     public String getMessage() {
         String message = super.getMessage();
-        return message;
+        return "Unexpcted error in protcol: " +message;
     }
 
 }

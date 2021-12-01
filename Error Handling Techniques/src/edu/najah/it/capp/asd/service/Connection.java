@@ -21,7 +21,9 @@ public class Connection {
 	//getInstance, createConnection , getConnection 
 	public static Protocol getInstance(String connectionType) throws ProtocolException{
 		if(connections.containsKey(connectionType)) {
-			throw new NoConnectionAvailableException("Connection is already created!.");
+			//throw new NoConnectionAvailableException("Connection is already created!."); //1
+			System.out.println("Connection is already created!."); // 0
+			return (Protocol) connections.get(connectionType); // 0
 		} else {
 			if(connections.size() >= 3 ) {
 				throw new ProtocolBusyException("Can't create more than 3 connection!!");
